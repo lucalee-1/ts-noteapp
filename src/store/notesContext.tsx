@@ -4,12 +4,12 @@ import Note from '../models/note';
 type NotesContextObj = {
   items: Note[];
   addNote: (text: string) => void;
-  deleteNote: (id: string) => void;
+  deleteNote: (id: string, text: string) => void;
 };
 export const NotesContext = createContext<NotesContextObj>({
   items: [],
   addNote: (text: string) => {},
-  deleteNote: (id: String) => {},
+  deleteNote: (id: String, text: string) => {},
 });
 
 const NotesContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -22,8 +22,8 @@ const NotesContextProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     });
   };
 
-  const handleDeleteNote = (noteId: string) => {
-    if (window.confirm('Are you sure you want to delete it?')) {
+  const handleDeleteNote = (noteId: string, noteText: string) => {
+    if (window.confirm(`Are you sure you want to delete "${noteText}"?`)) {
       setNotes((prevNotes) => {
         return prevNotes.filter((t) => t.id !== noteId);
       });

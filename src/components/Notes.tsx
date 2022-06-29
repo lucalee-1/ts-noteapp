@@ -12,7 +12,7 @@ const Notes: React.FC = () => {
         <NoteItem
           key={item.id}
           text={item.text}
-          onDeleteNote={notesCtx.deleteNote.bind(null, item.id)}
+          onDeleteNote={notesCtx.deleteNote.bind(null, item.id, item.text)}
         />
       ))}
     </ul>
