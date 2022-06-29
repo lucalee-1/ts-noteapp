@@ -1,14 +1,14 @@
-import NewTodo from './components/NewTodoForm';
-import Todos from './components/Todos';
-import TodosContextProvider from './store/todosContext';
+import NewNote from './components/NewNoteForm';
+import Notes from './components/Notes';
+import NotesContextProvider from './store/notesContext';
 
 function App() {
   return (
     <div>
-      <TodosContextProvider>
-        <NewTodo />
-        <Todos />
-      </TodosContextProvider>
+      <NotesContextProvider>
+        <NewNote />
+        <Notes />
+      </NotesContextProvider>
     </div>
   );
 }
