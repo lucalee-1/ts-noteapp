@@ -1,0 +1,25 @@
+.item {
+  margin: 1rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  background-color: #a3d6f8;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.item button {
+  font: bolder;
+  background-color: #fafbfc;
+  border: 0.5px solid #1b1f2326;
+  color: #201d0f;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item button:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
