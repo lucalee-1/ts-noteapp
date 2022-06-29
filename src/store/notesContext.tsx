@@ -13,7 +13,7 @@ export const NotesContext = createContext<NotesContextObj>({
 });
 
 const NotesContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [notes, setNotes] = useState<Note[]>([]);
+  const [notes, setNotes] = useState<Note[]>([new Note('React is fun'), new Note('TypeScript is useful if you need static typing')]);
 
   const handleAddNote = (noteText: string) => {
     const newNote = new Note(noteText);

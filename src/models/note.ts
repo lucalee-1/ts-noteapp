@@ -1,10 +1,13 @@
+import { v4 as uuidv4 } from 'uuid';
+
+
 class Note {
   id: string;
   text: string;
 
   constructor(noteText: string) {
     this.text = noteText;
-    this.id = new Date().toISOString();
+    this.id = uuidv4()
   }
 }
 
